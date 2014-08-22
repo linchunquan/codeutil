@@ -30,7 +30,7 @@ import org.springframework.web.servlet.mvc.AbstractController;
 
 import util.datastruct.RecordCound;
 
-
+//Test command handle controller
 public class TestCommandHandleController extends AbstractController{
 	
     private void parseParameters(HttpServletRequest request) {
