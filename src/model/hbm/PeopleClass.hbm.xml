@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  package="model">
+	<class name="model.PeopleClass" table="PeopleClass" lazy="false">
+
+		<id name="id" column="id" type="long" >
+			<generator class="identity"/>
+		</id>
+
+		<property name="peopleName"
+		          column="peopleName"
+		          type="string"/>
+
+	</class>
+</hibernate-mapping>

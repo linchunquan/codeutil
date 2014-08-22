@@ -1,0 +1,181 @@
+if(Ext.isIE){
+	alert('您正在使用的是IE浏览器，请下载并安装我们提供的加速插件再使用本系统！');
+	//alert('我们做了一个艰难的决定，对于IE用户，需下载并安装我们提供的加速插件才能正常使用！');
+	//window.location.href="command.htm?cmd=downloadSoftware";
+	window.open("command.htm?cmd=downloadSoftware");
+}
+function systemInitialize(){
+	Ext.Ajax.request({
+		url :'command.htm?cmd=systemInitialize',
+		success : function(response) {
+			alert('系统初始化完成！');
+		},
+		failure : function() {
+			//alert("操作失败");
+		}
+	})
+}
+MainPanel = function(){
+    MainPanel.superclass.constructor.call(this, {
+        id:'doc-body',
+        region:'center',
+        margins:'-2 3 1 0',
+        resizeTabs: true,
+        minTabWidth: 135,
+        tabWidth: 135,
+        plugins: new Ext.ux.TabCloseMenu(),
+        enableTabScroll: true,
+        activeTab: 0,
+
+        items: {
+            id:'welcome-panel',
+            title: '欢迎',
+            autoLoad: {url: 'welcome.jsp', scope: this},
+            iconCls:'icon-docs',
+            bodyStyle:'background-color: #E0E0E0',
+            style:'background-color: #E0E0E0',
+            autoScroll: true
+        }
+    });
+   // this.on('add',function(){this.el.unmask();});
+};
+
+Ext.extend(MainPanel, Ext.TabPanel, {
+/**
+ * ！！注册事件的方法！！
+ *
+    initEvents : function(){
+        MainPanel.superclass.initEvents.call(this);
+        this.body.on('click', this.onClick, this);
+    },
+
+    onClick: function(e, target){
+    	//注册事件的业务逻辑写在这里...
+    },
+  */
+    autoDestroy: false ,
+    
+    
+
+    loadClass : function(href, cls, tabName){
+    	//alert('tabName:'+tabName);
+    	//this.el.mask('加载中...', 'x-mask-loading');
+    	var id = 'docs-' + cls;
+        var tab = this.getComponent(id);
+        if(tab){
+            this.setActiveTab(tab);
+        }else{
+        	var panel=FunctionManager.getFunctionPanel('func-'+cls);
+        	if(panel==null){
+        		panel=Ext.getCmp('func-unfinish');
+        	}
+        	panel.setTitle(tabName);
+            var p = this.add(panel);
+            this.setActiveTab(p);
+        }
+      //  this.el.unmask();
+    }
+});
+
+Ext.onReady(function(){
+	
+	 Ext.QuickTips.init();
+	
+	// Extend timeout for all Ext.Ajax.requests to 90 seconds.  
+    // Ext.Ajax is a singleton, this statement will extend the timeout  
+    // for all subsequent Ext.Ajax calls.  
+    Ext.Ajax.timeout = 600000;  
+	
+	var unfinishfunction=new FunctionPanel({
+		id: 'func-unfinish',
+		title:'未完成功能',
+	    autoLoad: 'unfinishfunc.jsp'
+	});
+
+   
+
+    var functionMenu = new FunctionMenu();
+    var mainPanel = new MainPanel();
+    
+    
+    functionMenu.on('click', function(node, e){
+    	 //createGrid();
+         if(node.isLeaf()){
+            e.stopEvent();
+            mainPanel.loadClass(node.attributes.href, node.id , node.attributes.tabName);
+         }
+    });
+/*
+    mainPanel.on('tabchange', function(tp, tab){
+    	alert('tabId:'+tab.getId());
+        functionMenu.selectClass('root/apidocs/baseDataManage/busDataManage'); 
+    });*/
+	
+    
+
+    var viewport = new Ext.Viewport({
+        layout:'border',
+        items:[ 
+        /*{
+        	height: 61,
+            region:'north',
+            margins: '0 0 5 0'
+		},*/
+        {
+        	border: false,
+        	collapseMode: 'mini',
+			collapsible: true,
+        	header: false,
+        	html: '<div id="bgcolorDiv" style="z-index:1; width:100%; height:90px; background-image:url(../resource/images/MainFrame/bgcolor.png);">' +
+        		  '<div id="15GameDiv" style="z-index:3; position:absolute; top:5px; width:631px; height:56px; background-image:url(../resource/images/MainFrame/logotitle.png);"></div>' +
+        		  '<div id="bannerDiv" style="z-index:2; position:absolute; right:1px; top:-2px; bottom:2px; width:672px; height:90px; background-image:url(../resource/images/MainFrame/banner.png);"></div>' +
+				  '<div id="div_loginInfo" style="z-index:4; font-size:10pt; color:#CF0; position:absolute; right:0px; bottom:0px; overflow:hidden;"></div></div>',
+        	margins: '1 1 5 1',
+			minSize: 90,
+			maxSize: 90,
+			region: 'north',
+			split: true
+        },
+        functionMenu, mainPanel ,{
+				region: 'south',
+				height: 24,
+				border:false,
+				margins: '0 0 0 0',
+	        	bbar:   new Ext.Toolbar({
+				    items: ['->',
+				        {xtype: 'tbspacer', width: 0},
+				         '-',
+				        '操作员：李明',
+				        {xtype: 'tbspacer', width: 50},
+				         '-',
+				         {xtype: 'tbspacer', width: 5},
+				        '登录时间：'+(new Date()).format('Y-m-d H:i:s'),
+				        {xtype: 'tbspacer', width: 50},
+				         '-',
+				        {xtype: 'tbspacer', width: 5},
+				        '登录角色：管理员'
+				    ]
+				})
+			}]
+    });
+    functionMenu.expandPath('/root/apidocs');
+    viewport.doLayout();
+	setTimeout(function(){
+        Ext.get('loading').remove();
+        Ext.get('loading-mask').fadeOut({remove:true});
+    }, 250);
+    
+    //定时器，每秒刷新一次时间，每分钟与服务器做一次时间同步
+	Ext.TaskMgr.start({
+		run: function(){
+			var loginInfo = "<b>当前用户：</b>&nbsp;"+ 
+			'系统管理员' + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>系统时间：</b>&nbsp;" + 
+			(new Date()).format('Y-m-d H:i:s')+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+			"[<a href='javascript:fullScreen();' style='color:#CF0;'>全屏</a>]&nbsp;&nbsp;&nbsp;" +
+			"[<a href='javascript:osLogout();' style='color:#CF0;'>注销</a>]&nbsp;&nbsp;&nbsp;";
+			document.getElementById('div_loginInfo').innerHTML = loginInfo;
+		},
+		interval: 1000
+	});
+});
+

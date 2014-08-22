@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="GBK"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 指出系列的Hibernate映射文件 -->
+        <property name="mappingResources">
+            <list>
+<!--[HBMFiles]-->
+            </list>
+        </property>
+        <!-- 定义Hibernate连接的系列属性 -->
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.jdbc.batch_size">20</prop> 
+            </props>
+        </property>
+    </bean>
+    
+    
+ 	<!-- 添加声明式事务管理 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<!-- 事务拦截器bean需要依赖注入一个事务管理器 -->
+		<property name="transactionManager" ref="transactionManager"/>
+		<property name="transactionAttributes">
+			<!-- 下面定义事务传播属性 -->
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+			    <prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+			    <prop key="delete*">PROPAGATION_REQUIRED</prop>
+			    <prop key="update*">PROPAGATION_REQUIRED</prop>
+			    <prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+    <!-- 定义BeanNameAutoProxyCreator -->
+    <bean class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+	<!-- 指定对满足哪些Bean name的Bean自动生成业务代理 -->
+	    <property name="beanNames">
+            <!-- 下面是所有需要自动创建事务代理的Bean-->
+            <list>
+<!--[DAOsForProxyCreator]-->
+<!--[QueriersForProxyCreator]-->
+            </list>
+            <!-- 此处可增加其他需要自动创建事务代理的Bean-->
+	    </property>
+        <!-- 下面定义BeanNameAutoProxyCreator所需的事务拦截器-->
+        <property name="interceptorNames">
+            <list>
+                <value>transactionInterceptor</value>
+            </list>
+        </property>
+    </bean>
+    
+    <!-- 配置DAO组件 -->
+	<bean name="daoTemplate" abstract="true">
+		<!-- 为DAO组件注入SessionFactory实例 -->
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+<!--[DAOs]-->
+<!--[Queriers]-->
+     
+    <!--DAO聚合组件 -->
+    <bean id="compositeDao" class="dao.impl.CompositeDaoImpl">
+<!--[DAOsForCompositeDao]-->
+<!--[QueriersForCompositeDao]-->
+    </bean>
+</beans>

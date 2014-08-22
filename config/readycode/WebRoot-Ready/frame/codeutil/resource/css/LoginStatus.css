@@ -1,0 +1,648 @@
+.body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	height:100%;
+}
+
+.word12 {
+	font-size: 12px;
+}
+.word18 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #895089;
+}
+.w12 {
+	font-size: 12px;
+}
+.word12bm {
+	font-size: 12px;
+	color: #666666;
+}
+
+input {
+	border: 1px solid #CCCCCC;
+}
+.word12b {
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.back {
+
+	background:url(../images/main_10.jpg)}
+.backk {
+
+	background:url(../images/main_101.jpg)}
+.back1 {
+	background-color: #b727bf;
+}
+.back2 {
+	background-color: #ca65d1;
+}
+
+.line1 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+	height: 28px;
+	font-size: 12px;
+}
+
+.line2 {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+
+	font-size: 12px;
+}
+.w16b {
+	font-size: 16px;
+	font-weight: normal;
+	color: #333333;
+	height: 25px;
+}
+.word14bm {
+	font-size: 14px;
+	color: #FFFFFF;
+}
+.lineall {
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.word16 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.word30b {
+	font-size: 20px;
+	font-weight: bold;
+}
+.linell {
+	border: 1px solid #CCCCCC;
+}
+.word14 {
+	font-size: 14px;
+	color: #000000;
+	font-weight: normal;
+}
+.mb_topbg1 {
+	background-color: #CCCCCC;
+
+}
+.mb_topbg2 {
+	background-color: #EEEEEE;
+
+}
+.mb_tishi {
+	font-size: 12px;
+	color: #333333;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-color: #CCCCCC;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.bgeeeeee {
+	background-color: #EEEEEE;
+}
+red14 {
+	font-size: 14px;
+	color: #990000;
+}
+r12 {
+	color: #990000;
+}
+input {
+	height: 19px;
+}
+
+///-----------------
+/*车辆统计的数据*/
+.buscount {
+	FONT-SIZE: 9pt;
+	COLOR: #ff0000
+}
+
+/*比较暗的颜色..*/
+.dark {
+	COLOR: #cccccc;
+}
+
+/*数字时钟*/
+.clock {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 18px;
+	COLOR: #ff0000;
+}
+
+/*页面上面的那几个链接的样式*/
+A.toplink:link {
+	FONT-SIZE: 12px;
+	COLOR: #ffffff;
+	TEXT-DECORATION: none
+}
+
+A.toplink:visited {
+	FONT-SIZE: 12px;
+	COLOR: #ffffff;
+	TEXT-DECORATION: none
+}
+
+A.toplink:active {
+	FONT-SIZE: 12px;
+	COLOR: #ffffff;
+	TEXT-DECORATION: none
+}
+
+A.toplink:hover {
+	FONT-SIZE: 12px;
+	COLOR: #ff0000;
+	TEXT-DECORATION: none
+}
+
+/*主界面那些数据表的head的列的样式*/
+.clmhead {
+	COLOR: #194574;
+	BACKGROUND-COLOR: #ffffff;
+	font-weight: bold;
+}
+
+/**/
+.rowover {
+	BACKGROUND-COLOR: #ffccff;
+}
+
+.rowwhite {
+	BACKGROUND-COLOR: #ffffff;
+}
+
+.row0 {
+	BACKGROUND-COLOR: #E5E5E5;
+}
+
+.row1 {
+	BACKGROUND-COLOR: #ffffff;
+}
+
+.rowred {
+	BACKGROUND-COLOR: #ff0000;
+	COLOR: #ffffff;
+}
+
+.rowblue {
+	BACKGROUND-COLOR: #0000ff;
+	COLOR: #ffffff;
+}
+
+BODY {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	FONT-SIZE: 9pt;
+	OVERFLOW: auto;
+	COLOR: #194574;
+	SCROLLBAR-FACE-COLOR: #e8f4ff;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff;
+	SCROLLBAR-SHADOW-COLOR: #ffffff;
+	SCROLLBAR-ARROW-COLOR: #0066cc;
+	SCROLLBAR-BASE-COLOR: #fff0e1;
+	SCROLLBAR-DARK-SHADOW-COLOR: #ffffff
+}
+
+TD {
+	FONT-SIZE: 9pt;
+	LINE-HEIGHT: 130%
+}
+
+BUTTON {
+	BORDER-RIGHT: #c8e4ff 1px solid;
+	BORDER-TOP: #ffffff 1px solid;
+	FONT-SIZE: 9pt;
+	BACKGROUND-IMAGE: url(none);
+	BORDER-LEFT: #ffffff 1px solid;
+	COLOR: #0066cc;
+	BORDER-BOTTOM: #c8e4ff 1px solid;
+	FONT-STYLE: normal;
+	FONT-FAMILY: "Tahoma", "宋体";
+	BACKGROUND-COLOR: #f0fbec
+}
+
+TEXTAREA {
+	BORDER-RIGHT: #93bee2 1px solid;
+	BORDER-TOP: #93bee2 1px solid;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: #93bee2 1px solid;
+	COLOR: #0066cc;
+	BORDER-BOTTOM: #93bee2 1px solid;
+	FONT-STYLE: normal;
+	FONT-FAMILY: "Tahoma", "宋体";
+	BACKGROUND-COLOR: #ffffff;
+	font-color: #0066cc
+}
+
+SELECT {
+	BORDER-RIGHT: #c8e4ff 1px solid;
+	BORDER-TOP: #c8e4ff 1px solid;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: #c8e4ff 1px solid;
+	COLOR: #0066cc;
+	BORDER-BOTTOM: #c8e4ff 1px solid;
+	FONT-STYLE: normal;
+	FONT-FAMILY: "Tahoma", "宋体";
+	BACKGROUND-COLOR: #e8f4ff
+}
+
+A {
+	FONT-SIZE: 9pt;
+	COLOR: #194574;
+	text-decoration: none;
+}
+
+A:active {
+	COLOR: #006699;
+	text-decoration: none;
+}
+
+A:unknown {
+	COLOR: black;
+}
+
+A:hover {
+	COLOR: #ff4500;
+	text-decoration: none;
+}
+
+A:link {
+	text-decoration: none;
+}
+
+.Text {
+	FONT-SIZE: 9pt;
+}
+
+.menuBg {
+	FONT-SIZE: 9pt;
+	BACKGROUND-IMAGE: url(../images/sysSetup/menuItemBg.gif);
+	CURSOR: hand;
+	COLOR: #0a5cb1
+}
+
+.menuBg1 {
+	FONT-SIZE: 9pt;
+	BACKGROUND-IMAGE: url(../images/sysSetup/menuItemBgOn.gif);
+	CURSOR: hand;
+	COLOR: #ffffff
+}
+
+.InputCss_black {
+	BORDER-RIGHT: #000000 1px solid;
+	BORDER-TOP: #000000 1px solid;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: #000000 1px solid;
+	COLOR: #003399;
+	BORDER-BOTTOM: #000000 1px solid;
+	FONT-STYLE: normal;
+	FONT-FAMILY: "宋体"
+}
+
+.InputCss {
+	BORDER-RIGHT: #93bee2 1px solid;
+	BORDER-TOP: #93bee2 1px solid;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: #93bee2 1px solid;
+	COLOR: #003399;
+	BORDER-BOTTOM: #93bee2 1px solid;
+	FONT-STYLE: normal;
+	FONT-FAMILY: "宋体"
+}
+
+.ButtonCss {
+	BORDER-RIGHT: #93bee2 1px solid;
+	BORDER-TOP: #93bee2 1px solid;
+	FONT-SIZE: 9pt;
+	BACKGROUND-IMAGE: url(../Images/bluebuttonbg.gif);
+	BORDER-LEFT: #93bee2 1px solid;
+	CURSOR: hand;
+	COLOR: #006699;
+	BORDER-BOTTOM: #93bee2 1px solid;
+	FONT-STYLE: normal;
+	FONT-FAMILY: "Tahoma", "宋体";
+	BACKGROUND-COLOR: #e8f4ff
+}
+
+.Input2 {
+	BORDER-RIGHT: #003390 0px solid;
+	BORDER-TOP: #003390 0px solid;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: #003390 0px solid;
+	COLOR: #0066cc;
+	BORDER-BOTTOM: #003390 0px solid;
+	FONT-STYLE: normal;
+	FONT-FAMILY: "宋体"
+}
+
+.Input3 {
+	BORDER-RIGHT: #ffffff 1px solid;
+	BORDER-TOP: #ffffff 1px solid;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: #ffffff 1px solid;
+	COLOR: #0066cc;
+	BORDER-BOTTOM: #0066cc 1px solid;
+	FONT-FAMILY: "宋体";
+	TEXT-DECORATION: none
+}
+
+.SubFuncTitle {
+	FONT-SIZE: 12pt;
+	COLOR: #4a4a4a;
+	FONT-FAMILY: "黑体"
+}
+
+.leftRightBorder {
+	BORDER-RIGHT: #498cd1 1px solid;
+	BORDER-LEFT: #498cd1 1px solid
+}
+
+.errorMessage {
+	FONT-SIZE: 9pt;
+	COLOR: #ff0000
+}
+
+.handCursor {
+	CURSOR: hand
+}
+
+.LittleFont {
+	FONT-SIZE: 1px
+}
+
+.NoBorderInput {
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	BORDER-LEFT: 0px;
+	WIDTH: 100px;
+	BORDER-BOTTOM: 0px;
+	BACKGROUND-COLOR: #f2f5f9
+}
+
+.setupFont {
+	FONT-SIZE: 9pt;
+	COLOR: #194574;
+	FONT-FAMILY: 宋体
+}
+
+.tableBtn {
+	FONT-SIZE: 9pt;
+	CURSOR: hand;
+	COLOR: #194574;
+	FONT-FAMILY: 宋体
+}
+
+.TdNormal {
+	BORDER-RIGHT: thin groove;
+	BORDER-TOP: thin groove;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: thin groove;
+	WIDTH: 100%;
+	CURSOR: hand;
+	COLOR: #194574;
+	BORDER-BOTTOM: thin groove;
+	FONT-FAMILY: 宋体
+}
+
+.TdClicked {
+	BORDER-RIGHT: thin;
+	BORDER-TOP: thin groove;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: thin groove;
+	WIDTH: 100%;
+	CURSOR: hand;
+	COLOR: #194574;
+	BORDER-BOTTOM: thin groove;
+	FONT-FAMILY: 宋体
+}
+
+.TdMouseOver {
+	BORDER-RIGHT: thin;
+	BORDER-TOP: thin groove;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: thin groove;
+	WIDTH: 100%;
+	CURSOR: hand;
+	COLOR: #194574;
+	BORDER-BOTTOM: thin groove;
+	FONT-FAMILY: 宋体
+}
+
+.TdMouseOut {
+	BORDER-RIGHT: thin groove;
+	BORDER-TOP: thin groove;
+	FONT-SIZE: 9pt;
+	BORDER-LEFT: thin groove;
+	WIDTH: 100%;
+	CURSOR: hand;
+	COLOR: #194574;
+	BORDER-BOTTOM: thin groove;
+	FONT-FAMILY: 宋体
+}
+
+.SpcStatusCarTableStyle {
+	BORDER-RIGHT: #eeffff thin groove;
+	BORDER-TOP: #eeffff thin groove;
+	FONT-SIZE: 9pt;
+	Z-INDEX: 1;
+	BORDER-LEFT: #eeffff thin;
+	CURSOR: hand;
+	COLOR: #194574;
+	BORDER-BOTTOM: #eeffff thin groove;
+	FONT-FAMILY: 宋体;
+	POSITION: absolute
+}
+
+.StatusMenu {
+	BORDER-TOP-WIDTH: 0px;
+	BORDER-LEFT-WIDTH: 0px;
+	FONT-SIZE: 9pt;
+	Z-INDEX: 103;
+	BORDER-BOTTOM-WIDTH: 0px;
+	WIDTH: 100px;
+	BORDER-RIGHT-WIDTH: 0px;
+	cellSpacing: "0"
+}
+
+.box {
+	border: 1px solid #A5ACB3;
+	height: 21px;
+	margin: 0 3 0 3;
+}
+
+.P {
+	PADDING-RIGHT: 4px;
+	PADDING-LEFT: 4px;
+	CURSOR: hand
+}
+
+.T {
+	PADDING-RIGHT: 3px;
+	PADDING-LEFT: 3px;
+	BORDER-RIGHT: #336699 1px solid;
+	BORDER-TOP: #336699 1px solid;
+	BORDER-LEFT: #336699 1px solid;
+	BORDER-BOTTOM: #336699 1px solid;
+	CURSOR: hand;
+	BACKGROUND-COLOR: #e9f2f8;
+	COLOR: #FF0000;
+}
+
+.S {
+	PADDING-RIGHT: 3px;
+	PADDING-LEFT: 3px;
+	BORDER: #336699 1px solid;
+	CURSOR: hand;
+	BACKGROUND-COLOR: #D6EDDD;
+	COLOR: #FF0000;
+}
+
+.right_title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #057A0D;
+}
+
+.missionlink {
+	COLOR: #296A02;
+	FONT-STYLE: normal;
+	TEXT-DECORATION: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.divResizeLeft {
+	overflow: auto;
+	border-Left: 10px;
+	border-Left-width: 10px;
+	border-Left-style: double;
+	border-Left-color: #FFFFFF
+}
+
+.divResizeRight {
+	overflow: auto;
+}
+
+.tdResize {
+	border-right: 5px;
+	border-right-color: #e4e4e4;
+	border-right-style: solid;
+	border-right-width: 5px
+}
+
+/**************************************************************/
+.tdStar {
+	height: 20px;
+	color: Red;
+	font-size: 12pt;
+}
+
+/**************************************************************/
+.work_data_table {
+	border-left: 1px #aabfde solid;
+	border-top: 1px #aabfde solid;
+	background: #fff;
+	padding: 0 1px 2px 1px;
+}
+
+.work_data_table th {
+	height: 18px;
+	line-height: 18px;
+	border-top: 1px #fff solid;
+	border-right: 1px #aabfde solid;
+	border-bottom: 1px #aabfde solid;
+	padding: 4px;
+	background: #f0f4f7 url(../images/table_background.gif) repeat-x;
+	color: #354c6e;
+}
+
+.work_data_table td {
+	background: expression(( this . parentElement . sectionRowIndex % 2) ?
+		"#e2efff" : "#f2f2f2" );
+	border-top: 1px #fff solid;
+	border-right: 1px #aabfde solid;
+	border-bottom: 1px #aabfde solid;
+	padding: 4px;
+}
+
+.work_data_table .td01 {
+	background: #e2efff;
+	border-left: 1px #82a65b solid;
+}
+
+.work_data_table .td02 {
+	background: #f2f2f2;
+	border-left: 1px #82a65b solid;
+}
+
+.work_data_table span {
+	color: #b200c2;
+}
+
+.work_data_table a {
+	font-family: Verdana, Arial, sans-serif;
+	text-decoration: underline;
+	color: #000814;
+}
+
+.work_data_table a:hover {
+	color: #ff0000;
+	text-decoration: none;
+}
+
+.work_data_table a img {
+	margin-bottom: -5px;
+}
+/**************************************************************/
+
+
+.button_g_1 {
+	BORDER:1px solid #D7CCC7;PADDING:2px 8px 0px 0px;FONT-SIZE: 12px; COLOR:#3F3F3F;
+	background:url(../images/button_bg.gif) no-repeat right center;
+	CURSOR: hand; 
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping  package="model">
+	<class name="model.Location" table="Location" lazy="false">
+
+		<id name="id" column="id" type="long" >
+			<generator class="identity"/>
+		</id>
+
+		<property name="locationName"
+		          column="locationName"
+		          type="string"/>
+
+		<many-to-one
+         	name="peopleClass"
+         	class="PeopleClass"
+            unique="true"
+            cascade="none"
+            column="PeopleClass_ID"
+        />
+
+		<many-to-one
+         	name="peopleClass1"
+         	class="PeopleClass"
+            unique="true"
+            cascade="none"
+            column="PeopleClass_ID_1"
+        />
+
+		<property name="locationDate"
+		          column="locationDate"
+		          type="long"/>
+
+		<property name="count"
+		          column="count"
+		          type="int"/>
+
+		<property name="area"
+		          column="area"
+		          type="double"/>
+
+	</class>
+</hibernate-mapping>

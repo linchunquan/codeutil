@@ -1,0 +1,11 @@
+.html-no-border .x-html-editor-wrap {
+border: 0;
+}
+
+/**fix chrome bug*/
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+.x-grid3-cell
+{
+box-sizing: border-box;
+}
+}
