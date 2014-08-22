@@ -29,7 +29,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.AbstractController;
 
 import util.datastruct.RecordCound;
-
+  
 //Test command handle controller
 public class TestCommandHandleController extends AbstractController{
 	
@@ -43,6 +43,7 @@ public class TestCommandHandleController extends AbstractController{
         }
     }
 	
+    //Fix here
 	@Override
 	protected ModelAndView handleRequestInternal(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
